@@ -10,3 +10,6 @@ with socket.socket() as server_sock:
 
     server_sock.listen(0)
     print(f"Listening on {HOST}:{PORT}...")
+
+    client_sock, client_addr = server_sock.accept()
+    print(f"New connection from {client_addr}.")
